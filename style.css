@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #0a1f44;
+}
+
+.main-container {
+  margin: 3rem;
+  color: #f1eaea;
+}
+
+header h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.search {
+  background-color: #0a1f44;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #f1eaea;
+  width: 20rem;
+  font-size: 2rem;
+  color: #f1eaea;
+  padding-bottom: 0.3rem;
+}
+
+.search::placeholder {
+  color: #f1eaea;
+}
+
+.submit {
+  background-color: #ff1e42;
+  color: #f1eaea;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.8rem 1rem;
+  letter-spacing: 0.1rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 0.3rem;
+  margin-left: 0.5rem;
+  transition: all 0.5s ease;
+}
+
+.submit:hover {
+  background-color: #c3112d;
+}
+
+.error {
+  display: none;
+}
+
+.display-city {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 250px));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.city-container {
+  background-color: #e7e2d8;
+  color: #554e4e;
+  border-radius: 1.3rem;
+  position: relative;
+}
+
+.city-data {
+  padding: 2.5rem 2rem;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  outline: none;
+  background-color: #f32626;
+  border-radius: 0.2rem;
+}
+
+button:hover {
+  background-color: #b11e1e;
+}
+
+.delete {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #f1eaea;
+}
+
+.city {
+  font-size: 1.5rem;
+  position: relative;
+  margin-bottom: 0.8rem;
+}
+
+.country {
+  font-size: 0.8rem;
+  color: #f1eaea;
+  background-color: #ff8c00;
+  position: absolute;
+  bottom: 1rem;
+  padding: 0.1rem 0.4rem;
+  margin-left: 0.2rem;
+  border-radius: 1rem;
+}
+
+.degree-value {
+  font-size: 3rem;
+  font-weight: 600;
+  color: black;
+  position: relative;
+}
+
+.symbol {
+  font-size: 1.5rem;
+  font-weight: 200;
+  position: absolute;
+  bottom: 2rem;
+}
+
+@media screen and (max-width: 675px) {
+  .search,
+  .submit {
+    width: 100%;
+  }
+  .submit {
+    margin: 1rem 0;
+  }
+
+  .display-city {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 650px));
+  }
+}
